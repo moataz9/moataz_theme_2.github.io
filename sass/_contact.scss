@@ -1,0 +1,35 @@
+.contact {
+  margin-top: -3.6rem;
+  position: relative;
+  z-index: 0;
+  &_items {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      flex-basis: 48%;
+      .desc {
+        font-size: 1.1rem;
+      }
+      a {
+        color: $image_bg;
+        @include trans;
+        &:hover {
+          color: $blog_bg;
+        }
+      }
+      ul.desc {
+        padding: 0;
+        list-style-type: none;
+        li {
+          padding: .5rem 0;
+        }
+      }
+      &-map {
+        background-color: $image_bg;
+        width: 100%;
+        height: 33rem;
+        @extend %skewed_shap_contact !optional;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.blog {
+  @extend %skewed_shap_down;
+  background-color: $theme_bg;
+  color: $theme_font_color;
+  height: 50rem;
+  padding: 2.5rem 0;
+  z-index: 2;
+  position: relative;
+  &_items {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      flex-basis: 31%;
+      height: 20rem;
+      position: relative;
+      overflow: hidden;
+      &-content {
+        padding: 1rem;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        background-color: $blog_bg;
+        transform: translateY(80%);
+        @include trans;
+        h4 {
+          margin-top: 0;
+        }
+        .desc {
+          font-size: 1rem;
+          color: $secondary_theme_color;
+        }
+        &-btn {
+          padding: 1rem;
+          background-color: $theme_bg;
+          color: $theme_font_color;
+          display: inline-block;
+          position: absolute;
+          bottom: 3.6rem;
+        }
+        &-info {
+          bottom: 1.2rem;
+          position: absolute;
+        }
+      }
+      &:hover &-content {
+        transform: translateY(0);
+      }
+    }
+  }
+}

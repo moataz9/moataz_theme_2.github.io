@@ -1,0 +1,20 @@
+.footer {
+  background-color: $theme_bg;
+  color: $theme_font_color;
+  padding: 12rem 0 4rem 0;
+  @extend %skewed_shap_footer;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .desc {
+    a {
+      color: $blog_bg;
+      @include trans;
+      &:hover {
+        color: $secondary_theme_color;
+      }
+    }
+  }
+}

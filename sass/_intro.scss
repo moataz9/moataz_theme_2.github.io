@@ -1,0 +1,42 @@
+.intro {
+  margin-top: 16rem;
+  background-color: $theme_bg;
+  color: $theme_font_color;
+  padding: 8rem 0 10rem;
+  @extend %skewed_shap_down;
+  &_content {
+    display: flex;
+    &-item {
+      width: 50%;
+      .desc {
+        a {
+          color: $secondary_theme_color;
+          &:hover {
+            @include trans(color);
+            color: $theme_font_color;
+          }
+        }
+      }
+    }
+  }
+  &_info {
+    display: flex;
+    &-img {
+      width: 150%;
+      height: 200px;
+      background-color: $image_bg;
+    }
+    &-info {
+      padding: 0;
+      padding-left: 2rem;
+      list-style-type: none;
+      margin-top: 0;
+      .desc {
+        margin-top: 0;
+      }
+      p {
+        line-height: 1.3rem;
+      }
+    }
+  }
+}

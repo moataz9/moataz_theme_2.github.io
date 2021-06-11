@@ -1,0 +1,59 @@
+.header {
+  background-color: $theme_bg;
+  color: $theme_font_color;
+  height: $trailing_height;
+  a {
+    color: $theme_font_color;
+    &:hover {
+      color: $image_bg;
+      @include trans(color);
+    }
+  }
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    &-phone {
+      text-transform: capitalize;
+    }
+    &-phone,
+    &-social {
+      font-size: 1.3rem;
+    }
+    &-logo {
+      font-family: $logo_font_family;
+      font-size: 6rem;
+      line-height: 4rem;
+      text-transform: capitalize;
+      text-align: center;
+    }
+    &-social {
+      a {
+        padding: 0.8rem;
+        color: $theme_bg;
+        border: 2px solid currentColor;
+        background-color: $theme_font_color;
+        border-radius: 50%;
+        outline: 5px solid $theme_font_color;
+      }
+    }
+  }
+  &_nav {
+    margin-top: 1rem;
+    ul {
+      margin: 0 auto;
+      width: max-content;
+      font-weight: bold;
+    }
+  }
+  &_slider {
+    @extend %skewed_shap_up;
+    background-color: $image_bg;
+    // height: 800px;
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    cursor: grab;
+  }
+}
